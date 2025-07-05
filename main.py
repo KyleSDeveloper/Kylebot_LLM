@@ -1,61 +1,45 @@
-import json
-import datetime
-import requests
-import os
-from dotenv import load_dotenv
+import logging
+from transformers import BartTokenizer, BartForConditionalGeneration
+import torch
 
+# Configure logging
+logging.basicConfig(
+    filename='kylebot_errors.log',
+    level=logging.ERROR,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
-# Load or initialize tasks
-try:
-    with open("tasks.json", "r") as f:
-        tasks = json.load(f)
-except FileNotFoundError:
-    tasks = {"tasks": []}
+# Load BART
+tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
+model = BartForConditionalGeneration.from_pretrained('facebook/bart-large')
+# Placeholder: Load fine-tuned model later
+# model.load_state_dict(torch.load('kylebot_bart_model.pt'))
 
-# Load API key from .env file
-load_dotenv()
-api_key = os.getenv('OPENWEATHERMAP_API_KEY')
-
-def save_task(task, due_date):
-    tasks["tasks"].append({"task": task, "due": due_date})
-    with open("tasks.json", "w") as f:
-        json.dump(tasks, f)
-    return f"Locked in, Kyle: {task} by {due_date}"
-
-def list_tasks():
-    if not tasks["tasks"]:
-        return "You’re chillin’, no tasks!"
-    return "\n".join([f"- {t['task']} (Due: {t['due']})" for t in tasks["tasks"]])
-
-def get_weather(city):
+def generate_response(user_input):
     try:
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
-        response = requests.get(url).json()
-        if response.get("cod") != 200:
-            return f"Oof, couldn’t find {city}. Try again?"
-        desc = response["weather"][0]["description"]
-        temp = response["main"]["temp"]
-        return f"Weather in {city}: {desc}, {temp}°C"
+        # Prepare prompt with your chill, sarcastic vibe
+        prompt = f"Kylebot, a sarcastic and witty AI assistant like Grok, responds to '{user_input}' in a chill, humorous tone:"
+        inputs = tokenizer(prompt, return_tensors="pt", max_length=512, truncation=True)
+        outputs = model.generate(
+            inputs['input_ids'],
+            attention_mask=inputs['attention_mask'],
+            max_length=150,
+            num_beams=5,
+            early_stopping=True,
+            no_repeat_ngram_size=2
+        )
+        response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        return response
     except Exception as e:
-        return f"Yo, weather’s acting up: {str(e)}"
+        logging.error(f"Error generating response: {str(e)}")
+        return "Yo, something broke. Gimme a sec to fix my circuits."
 
 # Kylebot loop
-print("Kylebot v0.1.0 - Your Personal Wingman")
+print("Kylebot v0.1.0 - Your Sarcastic Cosmic Wingman (Powered by BART)")
 while True:
     user_input = input("Yo, what’s the vibe? ")
-    if "add task" in user_input.lower():
-        task = user_input.replace("add task", "").strip()
-        due = str(datetime.date.today())
-        print(save_task(task, due))
-    elif "list tasks" in user_input.lower():
-        print(list_tasks())
-    elif "weather" in user_input.lower():
-        city = user_input.replace("weather", "").strip()
-        if not city:
-            city = "Chicago"  # Default city, change as needed
-        print(get_weather(city))
-    elif "quit" in user_input.lower():
-        print("Later, my dude!")
+    if user_input.lower() in ["quit", "exit", "bye", "stop"]:
+        print("Later, my dude! Catch ya in the multiverse.")
         break
-    else:
-        print("Bruh, try 'add task <task>', 'list tasks', 'weather <city>', or 'quit'.")
+    response = generate_response(user_input)
+    print(response)
