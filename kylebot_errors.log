@@ -1,0 +1,47 @@
+2025-07-05 16:32:22,262 - INFO - Log file kylebot_errors.log is writable
+2025-07-05 16:32:22,262 - INFO - Loading tokenizer...
+2025-07-05 16:32:22,263 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-07-05 16:32:22,351 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-07-05 16:32:22,362 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/tokenizer_config.json HTTP/1.1" 200 0
+2025-07-05 16:32:22,413 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-05 16:32:22,477 - INFO - Tokenizer loaded
+2025-07-05 16:32:22,477 - INFO - Loading model...
+2025-07-05 16:32:22,521 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-05 16:32:22,532 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/config.json HTTP/1.1" 200 0
+2025-07-05 16:32:22,575 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-05 16:32:22,586 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/config.json HTTP/1.1" 200 0
+2025-07-05 16:32:22,630 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/model.safetensors HTTP/1.1" 404 0
+2025-07-05 16:32:22,632 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-07-05 16:32:22,701 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill HTTP/1.1" 200 5625
+2025-07-05 16:32:22,764 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/commits/main HTTP/1.1" 200 2762
+2025-07-05 16:32:22,835 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/discussions?p=0 HTTP/1.1" 200 13819
+2025-07-05 16:32:22,905 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/commits/refs%2Fpr%2F7 HTTP/1.1" 200 3727
+2025-07-05 16:32:22,936 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/generation_config.json HTTP/1.1" 307 0
+2025-07-05 16:32:22,949 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/generation_config.json HTTP/1.1" 200 0
+2025-07-05 16:32:22,949 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/refs%2Fpr%2F7/model.safetensors.index.json HTTP/1.1" 404 0
+2025-07-05 16:32:22,994 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2025-07-05 16:32:22,995 - INFO - Model loaded
+2025-07-05 16:32:22,995 - INFO - Kylebot v0.2.2 started
+2025-07-05 16:32:23,002 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/refs%2Fpr%2F7/model.safetensors HTTP/1.1" 302 0
+2025-07-05 16:32:31,046 - DEBUG - User input: tell me a joke
+2025-07-05 16:32:31,046 - DEBUG - Processing input: tell me a joke
+2025-07-05 16:32:31,046 - DEBUG - Prompt: User: tell me a joke
+Kylebot: A sarcastic, cosmic-themed quip: 
+2025-07-05 16:32:31,046 - DEBUG - Input token IDs: [[648, 2672, 33, 958, 383, 265, 2257, 206, 50, 2189, 73, 311, 33, 349, 6848, 2519, 19, 5312, 84, 317, 20, 1553, 1419, 614, 620, 33, 228, 2]]
+2025-07-05 16:32:31,528 - DEBUG - Response generated
+2025-07-05 16:32:31,528 - DEBUG - Output token IDs: [[1, 281, 446, 342, 407, 312, 21, 714, 315, 265, 2257, 38, 2]]
+2025-07-05 16:32:31,528 - DEBUG - Raw response: ' I don't get it. What is a joke?'
+2025-07-05 16:32:31,528 - DEBUG - Cleaned response: ' I don't get it. What is a joke?'
+2025-07-05 16:32:46,131 - DEBUG - User input: tell me a joke
+2025-07-05 16:32:46,132 - DEBUG - Processing input: tell me a joke
+2025-07-05 16:32:46,132 - DEBUG - Prompt: User: tell me a joke
+Kylebot:  I don't get it. What is a joke?
+User: tell me a joke
+Kylebot: A sarcastic, cosmic-themed quip: 
+2025-07-05 16:32:46,132 - DEBUG - Input token IDs: [[648, 2672, 33, 958, 383, 265, 2257, 206, 50, 2189, 73, 311, 33, 228, 281, 446, 342, 407, 312, 21, 714, 315, 265, 2257, 38, 206, 60, 2672, 33, 958, 383, 265, 2257, 206, 50, 2189, 73, 311, 33, 349, 6848, 2519, 19, 5312, 84, 317, 20, 1553, 1419, 614, 620, 33, 228, 2]]
+2025-07-05 16:32:46,211 - DEBUG - Response generated
+2025-07-05 16:32:46,211 - DEBUG - Output token IDs: [[1, 4918, 383, 458, 1498, 21, 714, 361, 304, 361, 335, 265, 2109, 38, 2]]
+2025-07-05 16:32:46,211 - DEBUG - Raw response: ' Tell me about yourself. What do you do for a living?'
+2025-07-05 16:32:46,211 - DEBUG - Cleaned response: ' Tell me about yourself. What do you do for a living?'
+2025-07-05 16:34:04,380 - DEBUG - User input: quit
+2025-07-05 16:34:04,380 - INFO - Exiting Kylebot
