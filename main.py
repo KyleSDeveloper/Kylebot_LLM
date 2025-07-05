@@ -10,25 +10,33 @@ logging.basicConfig(
 )
 
 # Load BART
+print("Loading tokenizer...")
 tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
+print("Tokenizer loaded!")
+print("Loading model...")
 model = BartForConditionalGeneration.from_pretrained('facebook/bart-large')
-# Placeholder: Load fine-tuned model later
-# model.load_state_dict(torch.load('kylebot_bart_model.pt'))
+print("Model loaded!")
 
 def generate_response(user_input):
+    print("Generating response...")
     try:
-        # Prepare prompt with your chill, sarcastic vibe
-        prompt = f"Kylebot, a sarcastic and witty AI assistant like Grok, responds to '{user_input}' in a chill, humorous tone:"
+        # Craft prompt to guide BART toward a response
+        prompt = f"Kylebot, a sarcastic and witty AI assistant, responds to '{user_input}' with a chill, humorous answer:"
         inputs = tokenizer(prompt, return_tensors="pt", max_length=512, truncation=True)
+        print("Inputs prepared...")
         outputs = model.generate(
             inputs['input_ids'],
             attention_mask=inputs['attention_mask'],
-            max_length=150,
-            num_beams=5,
+            max_length=100,  # Reduced for speed
+            num_beams=3,
             early_stopping=True,
-            no_repeat_ngram_size=2
+            no_repeat_ngram_size=2,
+            decoder_start_token_id=tokenizer.bos_token_id  # Start with beginning of sentence
         )
-        response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        print("Response generated!")
+        response = tokenizer.decode(outputs[0], skip_special_tokens=True).replace(prompt, "").strip()
+        if not response or prompt in response:
+            response = "Yo, I’m still figuring this out—try again, my dude!"
         return response
     except Exception as e:
         logging.error(f"Error generating response: {str(e)}")
