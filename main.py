@@ -1,6 +1,9 @@
 import json
 import datetime
 import requests
+import os
+from dotenv import load_dotenv
+
 
 # Load or initialize tasks
 try:
@@ -9,8 +12,9 @@ try:
 except FileNotFoundError:
     tasks = {"tasks": []}
 
-# OpenWeatherMap API key (replace with yours)
-API_KEY = "your_openweathermap_key"
+# Load API key from .env file
+load_dotenv()
+api_key = os.getenv('OPENWEATHERMAP_API_KEY')
 
 def save_task(task, due_date):
     tasks["tasks"].append({"task": task, "due": due_date})
