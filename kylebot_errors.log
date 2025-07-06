@@ -1,47 +1,60 @@
-2025-07-05 16:32:22,262 - INFO - Log file kylebot_errors.log is writable
-2025-07-05 16:32:22,262 - INFO - Loading tokenizer...
-2025-07-05 16:32:22,263 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
-2025-07-05 16:32:22,351 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
-2025-07-05 16:32:22,362 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/tokenizer_config.json HTTP/1.1" 200 0
-2025-07-05 16:32:22,413 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
-2025-07-05 16:32:22,477 - INFO - Tokenizer loaded
-2025-07-05 16:32:22,477 - INFO - Loading model...
-2025-07-05 16:32:22,521 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/config.json HTTP/1.1" 307 0
-2025-07-05 16:32:22,532 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/config.json HTTP/1.1" 200 0
-2025-07-05 16:32:22,575 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/config.json HTTP/1.1" 307 0
-2025-07-05 16:32:22,586 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/config.json HTTP/1.1" 200 0
-2025-07-05 16:32:22,630 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/model.safetensors HTTP/1.1" 404 0
-2025-07-05 16:32:22,632 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
-2025-07-05 16:32:22,701 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill HTTP/1.1" 200 5625
-2025-07-05 16:32:22,764 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/commits/main HTTP/1.1" 200 2762
-2025-07-05 16:32:22,835 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/discussions?p=0 HTTP/1.1" 200 13819
-2025-07-05 16:32:22,905 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/commits/refs%2Fpr%2F7 HTTP/1.1" 200 3727
-2025-07-05 16:32:22,936 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/generation_config.json HTTP/1.1" 307 0
-2025-07-05 16:32:22,949 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/generation_config.json HTTP/1.1" 200 0
-2025-07-05 16:32:22,949 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/refs%2Fpr%2F7/model.safetensors.index.json HTTP/1.1" 404 0
-2025-07-05 16:32:22,994 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
-2025-07-05 16:32:22,995 - INFO - Model loaded
-2025-07-05 16:32:22,995 - INFO - Kylebot v0.2.2 started
-2025-07-05 16:32:23,002 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/refs%2Fpr%2F7/model.safetensors HTTP/1.1" 302 0
-2025-07-05 16:32:31,046 - DEBUG - User input: tell me a joke
-2025-07-05 16:32:31,046 - DEBUG - Processing input: tell me a joke
-2025-07-05 16:32:31,046 - DEBUG - Prompt: User: tell me a joke
+2025-07-05 19:02:28,544 - INFO - Log file kylebot_errors.log is writable
+2025-07-05 19:02:28,544 - INFO - Loading tokenizer...
+2025-07-05 19:02:28,545 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-07-05 19:02:30,360 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+2025-07-05 19:02:30,785 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/tokenizer_config.json HTTP/1.1" 200 0
+2025-07-05 19:02:31,372 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+2025-07-05 19:02:31,450 - INFO - Tokenizer loaded
+2025-07-05 19:02:31,450 - INFO - Loading model...
+2025-07-05 19:02:31,804 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-05 19:02:32,842 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/config.json HTTP/1.1" 200 0
+2025-07-05 19:02:33,511 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/config.json HTTP/1.1" 307 0
+2025-07-05 19:02:33,594 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/config.json HTTP/1.1" 200 0
+2025-07-05 19:02:33,907 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/model.safetensors HTTP/1.1" 404 0
+2025-07-05 19:02:33,915 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-07-05 19:02:34,239 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/generation_config.json HTTP/1.1" 307 0
+2025-07-05 19:02:34,480 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/facebook/blenderbot-400M-distill/eaaf64e3be20ad1f1fb0bdf689565ba52c97eafe/generation_config.json HTTP/1.1" 200 0
+2025-07-05 19:02:34,865 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+2025-07-05 19:02:34,867 - INFO - Model loaded
+2025-07-05 19:02:34,867 - INFO - Kylebot v0.2.2 started
+2025-07-05 19:02:35,970 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill HTTP/1.1" 200 5625
+2025-07-05 19:02:37,501 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/commits/main HTTP/1.1" 200 2762
+2025-07-05 19:02:37,991 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/discussions?p=0 HTTP/1.1" 200 13819
+2025-07-05 19:02:38,128 - DEBUG - https://huggingface.co:443 "GET /api/models/facebook/blenderbot-400M-distill/commits/refs%2Fpr%2F7 HTTP/1.1" 200 3727
+2025-07-05 19:02:38,417 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/refs%2Fpr%2F7/model.safetensors.index.json HTTP/1.1" 404 0
+2025-07-05 19:02:39,734 - DEBUG - https://huggingface.co:443 "HEAD /facebook/blenderbot-400M-distill/resolve/refs%2Fpr%2F7/model.safetensors HTTP/1.1" 302 0
+2025-07-05 19:03:04,701 - DEBUG - User input: hi
+2025-07-05 19:03:04,701 - DEBUG - Processing input: hi
+2025-07-05 19:03:04,704 - DEBUG - Prompt: User: hi
 Kylebot: A sarcastic, cosmic-themed quip: 
-2025-07-05 16:32:31,046 - DEBUG - Input token IDs: [[648, 2672, 33, 958, 383, 265, 2257, 206, 50, 2189, 73, 311, 33, 349, 6848, 2519, 19, 5312, 84, 317, 20, 1553, 1419, 614, 620, 33, 228, 2]]
-2025-07-05 16:32:31,528 - DEBUG - Response generated
-2025-07-05 16:32:31,528 - DEBUG - Output token IDs: [[1, 281, 446, 342, 407, 312, 21, 714, 315, 265, 2257, 38, 2]]
-2025-07-05 16:32:31,528 - DEBUG - Raw response: ' I don't get it. What is a joke?'
-2025-07-05 16:32:31,528 - DEBUG - Cleaned response: ' I don't get it. What is a joke?'
-2025-07-05 16:32:46,131 - DEBUG - User input: tell me a joke
-2025-07-05 16:32:46,132 - DEBUG - Processing input: tell me a joke
-2025-07-05 16:32:46,132 - DEBUG - Prompt: User: tell me a joke
-Kylebot:  I don't get it. What is a joke?
-User: tell me a joke
+2025-07-05 19:03:04,704 - DEBUG - Input token IDs: [[648, 2672, 33, 7336, 206, 50, 2189, 73, 311, 33, 349, 6848, 2519, 19, 5312, 84, 317, 20, 1553, 1419, 614, 620, 33, 228, 2]]
+2025-07-05 19:03:05,173 - DEBUG - Response generated
+2025-07-05 19:03:05,173 - DEBUG - Output token IDs: [[1, 4424, 19, 544, 366, 304, 929, 1752, 38, 281, 476, 929, 731, 19, 2828, 304, 21, 2]]
+2025-07-05 19:03:05,173 - DEBUG - Raw response: ' Hi, how are you doing today? I'm doing well, thank you.'
+2025-07-05 19:03:05,173 - DEBUG - Cleaned response: ' Hi, how are you doing today? I'm doing well, thank you.'
+2025-07-05 19:04:41,007 - DEBUG - User input: im doing well
+2025-07-05 19:04:41,008 - DEBUG - Processing input: im doing well
+2025-07-05 19:04:41,009 - DEBUG - Prompt: User: hi
+Kylebot:  Hi, how are you doing today? I'm doing well, thank you.
+User: im doing well
 Kylebot: A sarcastic, cosmic-themed quip: 
-2025-07-05 16:32:46,132 - DEBUG - Input token IDs: [[648, 2672, 33, 958, 383, 265, 2257, 206, 50, 2189, 73, 311, 33, 228, 281, 446, 342, 407, 312, 21, 714, 315, 265, 2257, 38, 206, 60, 2672, 33, 958, 383, 265, 2257, 206, 50, 2189, 73, 311, 33, 349, 6848, 2519, 19, 5312, 84, 317, 20, 1553, 1419, 614, 620, 33, 228, 2]]
-2025-07-05 16:32:46,211 - DEBUG - Response generated
-2025-07-05 16:32:46,211 - DEBUG - Output token IDs: [[1, 4918, 383, 458, 1498, 21, 714, 361, 304, 361, 335, 265, 2109, 38, 2]]
-2025-07-05 16:32:46,211 - DEBUG - Raw response: ' Tell me about yourself. What do you do for a living?'
-2025-07-05 16:32:46,211 - DEBUG - Cleaned response: ' Tell me about yourself. What do you do for a living?'
-2025-07-05 16:34:04,380 - DEBUG - User input: quit
-2025-07-05 16:34:04,380 - INFO - Exiting Kylebot
+2025-07-05 19:04:41,010 - DEBUG - Input token IDs: [[648, 2672, 33, 7336, 206, 50, 2189, 73, 311, 33, 228, 4424, 19, 544, 366, 304, 929, 1752, 38, 281, 476, 929, 731, 19, 2828, 304, 21, 206, 60, 2672, 33, 624, 929, 731, 206, 50, 2189, 73, 311, 33, 349, 6848, 2519, 19, 5312, 84, 317, 20, 1553, 1419, 614, 620, 33, 228, 2]]
+2025-07-05 19:04:41,133 - DEBUG - Response generated
+2025-07-05 19:04:41,133 - DEBUG - Output token IDs: [[1, 4424, 19, 281, 632, 929, 731, 21, 855, 366, 304, 38, 2]]
+2025-07-05 19:04:41,133 - DEBUG - Raw response: ' Hi, I am doing well. How are you?'
+2025-07-05 19:04:41,133 - DEBUG - Cleaned response: ' Hi, I am doing well. How are you?'
+2025-07-05 19:06:04,644 - DEBUG - User input: \quit
+2025-07-05 19:06:04,644 - DEBUG - Processing input: \quit
+2025-07-05 19:06:04,644 - DEBUG - Prompt: User: hi
+Kylebot:  Hi, how are you doing today? I'm doing well, thank you.
+User: im doing well
+Kylebot:  Hi, I am doing well. How are you?
+User: \quit
+Kylebot: A sarcastic, cosmic-themed quip: 
+2025-07-05 19:06:04,644 - DEBUG - Input token IDs: [[648, 2672, 33, 7336, 206, 50, 2189, 73, 311, 33, 228, 4424, 19, 544, 366, 304, 929, 1752, 38, 281, 476, 929, 731, 19, 2828, 304, 21, 206, 60, 2672, 33, 624, 929, 731, 206, 50, 2189, 73, 311, 33, 228, 4424, 19, 281, 632, 929, 731, 21, 855, 366, 304, 38, 206, 60, 2672, 33, 5003, 489, 277, 206, 50, 2189, 73, 311, 33, 349, 6848, 2519, 19, 5312, 84, 317, 20, 1553, 1419, 614, 620, 33, 228, 2]]
+2025-07-05 19:06:04,737 - DEBUG - Response generated
+2025-07-05 19:06:04,737 - DEBUG - Output token IDs: [[1, 281, 476, 584, 21, 714, 361, 304, 361, 335, 265, 2109, 38, 2]]
+2025-07-05 19:06:04,737 - DEBUG - Raw response: ' I'm good. What do you do for a living?'
+2025-07-05 19:06:04,737 - DEBUG - Cleaned response: ' I'm good. What do you do for a living?'
+2025-07-05 19:06:09,816 - DEBUG - User input: quit
+2025-07-05 19:06:09,817 - INFO - Exiting Kylebot
